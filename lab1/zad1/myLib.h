@@ -12,16 +12,24 @@ struct OpBlock{
 };
 
 struct BlockArray{
-    int opCount;
-    struct OpBlock* opArray;
+    int idx;
+    struct OpBlock* blocks;
 };
 
 
+// To jeszcze trzeba zweryfikowac
+struct BlockArray* createBlockArray(int size);
+struct OpBlock* createOpBlock(int size);
+struct OpBlock* compareTwoFiles(const char* file1,const char* file2);
 
-struct BlockArray createBlockArray(int size);
-struct OpBlock createOpBlock(int size);
-struct OpBlock compareTwoFiles(const char* file1,const char* file2);
-//struct OpBlock createOpBlock(int size);
+// Tego jeszcze nie ma
+/*
+void parseFilePairs(char* filePairsList);
+void deleteOperation(struct BlockArray* blockArray, int blockIdx, int operationIdx);
+void deleteOpBlock(struct BlockArray* blockArray, int blockIdx);
+void deleteBlockArray(struct BlockArray* blockArray);
+*/
+
 
 
 #endif

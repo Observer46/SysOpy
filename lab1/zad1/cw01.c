@@ -3,6 +3,11 @@
 #include "myLib.h"
 
 
+void make_tmp_file(const char* filename1, const char* filename2){
+    char cmdbuffor [100];
+    sprintf(cmdbuffor,"diff %s %s >tmp.txt",filename1, filename2);
+    system(cmdbuffor);
+}
 
 
 void test_read(const char* tmpfile){
@@ -22,18 +27,19 @@ void make_tmp(/*PARY PLIKÓW*/){
 
 // POLIGON TESTOWY
 int main(){
-    /*char* tmpname = "tmp.txt";
+    char* tmpname = "tmp.txt";
     char* filename1 = "a.txt";
     char* filename2 = "b.txt";
     make_tmp_file(filename1, filename2);
 
     test_read(tmpname);
-    int del_status = remove(tmpname);
+    /*int del_status = remove(tmpname);
     if(del_status != 0){
         printf("Nie udalo sie usunac pliku tymczasowego");
         exit(1);
     }
-    */
+    
     createBlockArray(10);
+    */
     return 0;
 }
