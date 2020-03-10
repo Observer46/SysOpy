@@ -3,13 +3,13 @@
 
 ## Zadanie 1
 Tworzymy biblioteke, ktora umozliwa:  
-* Stworzenie glownej tablicy wskaznikow na bloki operacji edycjnych polecenia diff, jedna para plikow - jeden blok (jedno miejsce w glownej tablicy) [ ]
-* Zadanie sekwencji par plikow [ ]
-* Wywolanie diff a.txt b.txt do pliku tymczasowego (w tmp.txt jedna para naraz) [ ]
-* Na podstawie tmp.txt stworzyc blok operacji edycyjnych [ ]
-* Usuniecie z pamieci (z tablicy glownej) bloku o indeksie i [ ]
-* Usuniecie danej operacji z bloku o indeksie i [ ]
-* Makefile ma tworzyc biblioteke w dwoch wersjach: statycznej i dzielonej [ ]
+- Stworzenie glownej tablicy wskaznikow na bloki operacji edycjnych polecenia diff, jedna para plikow - jeden blok (jedno miejsce w glownej tablicy) [ ]
+- Zadanie sekwencji par plikow [ ]
+- Wywolanie diff a.txt b.txt do pliku tymczasowego (w tmp.txt jedna para naraz) [ ]
+- Na podstawie tmp.txt stworzyc blok operacji edycyjnych [ ]
+- Usuniecie z pamieci (z tablicy glownej) bloku o indeksie i [ ]
+- Usuniecie danej operacji z bloku o indeksie i [ ]
+- Makefile ma tworzyc biblioteke w dwoch wersjach: statycznej i dzielonej [ ]
 
 ## Zadanie 2
 Testowanie biblioteki:  
