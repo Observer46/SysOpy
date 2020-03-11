@@ -27,13 +27,14 @@ void make_tmp(/*PARY PLIKÓW*/){
 
 // POLIGON TESTOWY
 int main(){
-    char* tmpname = "tmp.txt";
+    //char* tmpname = "tmp.txt";
     char* filename1 = "a.txt";
     char* filename2 = "b.txt";
+    /*
     make_tmp_file(filename1, filename2);
 
     test_read(tmpname);
-    /*int del_status = remove(tmpname);
+    int del_status = remove(tmpname);
     if(del_status != 0){
         printf("Nie udalo sie usunac pliku tymczasowego");
         exit(1);
@@ -41,5 +42,15 @@ int main(){
     
     createBlockArray(10);
     */
+    struct BlockArray* blockArray = createBlockArray(1);
+    char* files[] = {filename1, filename2};
+    parseFilePairs(blockArray, files, 1);
+    int operation = blockArray->blocks[0]->opCount;
+    printf("%d\n",operation);
+    //char* op1 = blockArray ->blocks[0]->operations[1];
+    //printf("%s",op1);
+    printOperation(blockArray,0,2);
+    printBlock(blockArray, 0);
+    deleteBlockArray(blockArray);
     return 0;
 }

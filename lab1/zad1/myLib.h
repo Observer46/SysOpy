@@ -5,30 +5,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 struct OpBlock{
     char ** operations;
-    int idx;
+    int opCount;
 };
 
 struct BlockArray{
-    int idx;
-    struct OpBlock* blocks;
+    int size;
+    struct OpBlock** blocks;
 };
 
 
-// To jeszcze trzeba zweryfikowac
+
 struct BlockArray* createBlockArray(int size);
 struct OpBlock* createOpBlock(int size);
-struct OpBlock* compareTwoFiles(const char* file1,const char* file2);
+int parseOperationsFromTmp(struct OpBlock* opBlock, char* tmpfileName);
+int compareTwoFiles(struct BlockArray* blockArray, const char* file1,const char* file2, int idx);
+void parseFilePairs(struct BlockArray* blockArray ,char** filePairsList, int pairsNumber);
 
-// Tego jeszcze nie ma
-/*
-void parseFilePairs(char* filePairsList);
-void deleteOperation(struct BlockArray* blockArray, int blockIdx, int operationIdx);
-void deleteOpBlock(struct BlockArray* blockArray, int blockIdx);
-void deleteBlockArray(struct BlockArray* blockArray);
-*/
+//wyniki traktujemy jak kody bledow
+int deleteOperation(struct BlockArray* blockArray, int blockIdx, int operationIdx);
+int deleteOpBlock(struct BlockArray* blockArray, int blockIdx);
+int deleteBlockArray(struct BlockArray* blockArray);
+
+//bonus do weryfikacji wynikow
+void printOperation(struct BlockArray* blockArray, int blockIdx, int operationIdx);
+void printBlock(struct BlockArray* blockArray, int blockIdx);
+
 
 
 
