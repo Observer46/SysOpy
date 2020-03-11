@@ -1,0 +1,16 @@
+code1 segment
+start:
+    mov     ax, seg code1
+    mov     ds, ax
+    mov     dx, offset txt
+
+    mov     ah,9
+    int     21h 
+
+    mov     ax,4c00h
+    int     21h
+    ;komentarz po sredniku jest interesujacym pomyslem
+
+txt db  "SysOpy sa fajne",'$'
+code1 ends
+end     start

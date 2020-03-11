@@ -17,7 +17,7 @@ Testowanie biblioteki:
 * create_table size - tworzy tablice glowna o rozmiarze size [ ]
 * compare_pairs file1A.txt:file1B.txt file2A.txt:file2B.txt ... - porownanie parami, zapisanie wynikow do blokow operacyjnych [ ]
 * remove_block i - usuwa i-ty blok [ ]
-* remove_operation block_i oper_j - usuwa z i-tego bloku j-ta operacje [ ]
+* remove_operation block_i oper_j - usuwa z i-tego bloku j-ta operacje [ ]  
 Zas na konsole i do pliku z raportem wypisujemy czas dzialania dla:  
 * malo(1-5), srednio (undefined) i duzo (undefined) par o roznych stopniach podobienstwa - maly, sredni i duzy (all undefined) [ ]
 * Zapisywanie roznych rozmiarow blokow w pamieci [ ]
