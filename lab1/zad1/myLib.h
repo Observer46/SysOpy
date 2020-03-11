@@ -27,11 +27,11 @@ void parseFilePairs(struct BlockArray* blockArray ,char** filePairsList, int pai
 
 //wyniki traktujemy jak kody bledow
 int deleteOperation(struct BlockArray* blockArray, int blockIdx, int operationIdx);
-int deleteOpBlock(struct BlockArray* blockArray, int blockIdx);
+int deleteOpBlock(struct BlockArray* blockArray, int blockIdx, int printMode);
 int deleteBlockArray(struct BlockArray* blockArray);
 
 //bonus do weryfikacji wynikow
-void printOperation(struct BlockArray* blockArray, int blockIdx, int operationIdx);
+void printOperation(struct BlockArray* blockArray, int blockIdx, int operationIdx, int printMode);
 void printBlock(struct BlockArray* blockArray, int blockIdx);
 
 

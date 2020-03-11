@@ -6,7 +6,9 @@ static: clean
 	ar crs libmyLib.a myLib.o
 	$(CC) cw01.c -o cw01 -L. -lmyLib
 	
-shard:	clean
+shared:	clean
+	$(CC) -fPIC -shared myLib.c -o libmyLib.so
+	$(CC) cw01.c -L. -Wl,-rpath=. -lmyLib -o cw01
 	
 clean:
 	rm -f cw01

@@ -3,19 +3,19 @@
 
 ## Zadanie 1
 Tworzymy biblioteke, ktora umozliwa:  
-- Stworzenie glownej tablicy wskaznikow na bloki operacji edycjnych polecenia diff, jedna para plikow - jeden blok (jedno miejsce w glownej tablicy) [ ]
-- Zadanie sekwencji par plikow [ ]
-- Wywolanie diff a.txt b.txt do pliku tymczasowego (w tmp.txt jedna para naraz) [ ]
-- Na podstawie tmp.txt stworzyc blok operacji edycyjnych [ ]
-- Usuniecie z pamieci (z tablicy glownej) bloku o indeksie i [ ]
-- Usuniecie danej operacji z bloku o indeksie i [ ]
-- Makefile ma tworzyc biblioteke w dwoch wersjach: statycznej i dzielonej [ ]
+- Stworzenie glownej tablicy wskaznikow na bloki operacji edycjnych polecenia diff, jedna para plikow - jeden blok (jedno miejsce w glownej tablicy) [X]
+- Zadanie sekwencji par plikow [X]
+- Wywolanie diff a.txt b.txt do pliku tymczasowego (w tmp.txt jedna para naraz) [X]
+- Na podstawie tmp.txt stworzyc blok operacji edycyjnych [X]
+- Usuniecie z pamieci (z tablicy glownej) bloku o indeksie i [X]
+- Usuniecie danej operacji z bloku o indeksie i [x]
+- Makefile ma tworzyc biblioteke w dwoch wersjach: statycznej i dzielonej [x]
 
 ## Zadanie 2
 Testowanie biblioteki:  
 * Argumenty do wywolania programu - zadania do wykonania, najpierw tworzymy tablice glowna o zadanym rozmiarze [ ]
 * create_table size - tworzy tablice glowna o rozmiarze size [ ]
-* copare_pairs file1A.txt:file1B.txt file2A.txt:file2B.txt ... - porownanie parami, zapisanie wynikow do blokow operacyjnych [ ]
+* compare_pairs file1A.txt:file1B.txt file2A.txt:file2B.txt ... - porownanie parami, zapisanie wynikow do blokow operacyjnych [ ]
 * remove_block i - usuwa i-ty blok [ ]
 * remove_operation block_i oper_j - usuwa z i-tego bloku j-ta operacje [ ]
 Zas na konsole i do pliku z raportem wypisujemy czas dzialania dla:  
