@@ -1,0 +1,5 @@
+Z uzyskanych danych wynika, ze:
+- coraz lepsze poziomy optymalizacji poprawiaja czas dzialania programu
+- niestety, najwiekszy wplyw na czas dzialania ma czas przydzialu procesora, co utrudnia zauwazenie duzej roznicy
+w czasach dzialania programow
+- krotkie czasy dzialania operacji jeszcze bardziej utrudniaja wykrecie tego

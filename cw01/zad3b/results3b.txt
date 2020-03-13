@@ -1,0 +1,1340 @@
+Statycznie O0: 
+
+Operacja: create_table
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.020000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.020000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+Wspoldzielone O0: 
+
+Operacja: create_table
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.050000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.030000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+Dynamicznie O0: 
+
+Operacja: create_table
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.020000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.030000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+
+
+
+Statycznie O1: 
+
+Operacja: create_table
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.020000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.030000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+Wspoldzielone O1: 
+
+Operacja: create_table
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.020000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.010000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.020000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+Dynamicznie O1: 
+
+Operacja: create_table
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.010000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.030000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+
+
+
+Statycznie O2: 
+
+Operacja: create_table
+Czas rzeczywisty: 0.010000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.010000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.010000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.020000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+Wspoldzielone O2: 
+
+Operacja: create_table
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.030000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.030000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+Dynamicznie O2: 
+
+Operacja: create_table
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.030000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.010000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: compare_pairs
+Czas rzeczywisty: 0.020000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_block
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: remove_operation
+Czas rzeczywisty: 0.000000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
