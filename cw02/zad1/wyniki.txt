@@ -1,0 +1,21 @@
+
+Operacja: copy
+Czas rzeczywisty: 4.320000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: copy
+Czas rzeczywisty: 0.770000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
+
+Operacja: copy
+Czas rzeczywisty: 2.160000
+Czas uzytkownika: 0.000000
+Czas systemowy: 0.000000
+
+
