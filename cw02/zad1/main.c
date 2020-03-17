@@ -83,12 +83,14 @@ int partition_sys(int fileToSort, int from, int to, int recordLength){
     
     for(int j = from; j < to; j++){
         read(fileToSort, iter, recordLength + 1);
-        if(strcmp(pivot, iter) < 0)
-            swap_sys(fileToSort, ++i, j, recordLength);
+        if(strcmp(pivot, iter) > 0){
+            i++;
+            swap_sys(fileToSort, i, j, recordLength);
+        }
     }
 
     i++;
-    swap_sys(fileToSort, i, from, recordLength);  
+    swap_sys(fileToSort, i, to, recordLength);  
 
     free(pivot);
     free(iter);
@@ -109,6 +111,7 @@ void swap_lib(FILE* fileToSort, int idx1, int idx2, int recordLength){
     char* record1 = (char*) calloc(recordLength + 1, sizeof(char) );
     char* record2 = (char*) calloc(recordLength + 1, sizeof(char) );
 
+    printf("Swapping %d with %d\n",idx1,idx2);
     // Wyciagamy recordy do zamiany
     fseek(fileToSort, (recordLength + 1)*idx1, 0);
     fread(record1, sizeof(char), recordLength + 1, fileToSort);
@@ -126,9 +129,10 @@ void swap_lib(FILE* fileToSort, int idx1, int idx2, int recordLength){
 }
 
 int partition_lib(FILE* fileToSort, int from, int to, int recordLength){
-    fseek(fileToSort, (recordLength + 1)*to , 0);
     char* pivot = (char*)calloc(recordLength + 1, sizeof(char));
+    fseek(fileToSort, (recordLength + 1)*to , 0);
     fread(pivot, sizeof(char), recordLength + 1, fileToSort);
+    printf("Sortowanie od %d do %d, pivot: %s\n",from,to,pivot);
 
     fseek(fileToSort, (recordLength + 1)*from , 0);      // Na poczatek przedzialu na ktorym dzialamy
     char* iter = (char*)calloc(recordLength+1, sizeof(char));
@@ -136,12 +140,13 @@ int partition_lib(FILE* fileToSort, int from, int to, int recordLength){
     
     for(int j = from; j < to; j++){
         fread(iter, sizeof(char), recordLength + 1, fileToSort);
-        if(strcmp(pivot, iter) < 0)
+        if(strcmp(pivot, iter) > 0)
             swap_lib(fileToSort, ++i, j, recordLength);
+        
     }
 
     i++;
-    swap_lib(fileToSort, i, from, recordLength);  
+    swap_lib(fileToSort, i, to, recordLength);  
 
     free(pivot);
     free(iter);
@@ -312,8 +317,9 @@ int main(int argc, char** argv){
         printf("Nie podano argumentow!\n");                         
         exit(1);
     }
-
-    FILE* resHandle = fopen("wyniki.txt","a");
+    // FILE* test = fopen("sortest.txt","r+");
+    // qsort_lib(test, 0, 16, 1);
+    // fclose(test);
 
     startTimer();
     char * operation = argv[1];
@@ -414,6 +420,7 @@ int main(int argc, char** argv){
         exit(1);
     }
     endTimer();
+    FILE* resHandle = fopen("wyniki.txt","a");
     writeResults(resHandle, operation);
     fclose(resHandle);
         
