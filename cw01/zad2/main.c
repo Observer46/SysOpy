@@ -25,7 +25,7 @@ int isANumber(char* number){
 }
 
 double countTime(clock_t start, clock_t end){
-    return ( (double) (end - start)/(sysconf(_SC_CLK_TCK)) );     // 100 bo tyle razy powtarzamy kazda operacje
+    return ( (double) (end - start)/(sysconf(_SC_CLK_TCK)) );
 }
 
 void writeResults(FILE* output, char* opName){
