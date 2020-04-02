@@ -1,5 +1,0 @@
-Z uzyskanych danych wynika, ze:
-- wiekszosc usuwan dzieje sie tak szybko, ze zaden zegar tego nie wykrywa
-- rozmiary programow: statycznie < dynamicznie < wspoldzielone
-- pomijajac rozne czasy przydzialu procesora, to czas wykonania operacji jest najszybszy dla dynamicznego i wspoldzielonego,
-dla statycznego najdluzsze sa

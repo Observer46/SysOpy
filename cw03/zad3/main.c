@@ -9,6 +9,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <fcntl.h>
+#include <sys/resource.h>
 
 #include "matrixMethods.h"
 
@@ -181,7 +182,6 @@ int mul_matrix(int processIdx, int* processCount, int* pairCount, char** matrice
             break;
         }
     }
-    printf("%d konczy dzialanie, wykonalem %d mnozen\n",getpid(),mulCounter);
     return mulCounter;
 }
 
@@ -236,9 +236,9 @@ void paste_files(char** matricesC, pid_t* farm, int processCount, int pairCount)
 
 
 int main(int argc, char** argv){
-    if (argc != 5 ){
+    if (argc != 7 ){
         fprintf(stderr,"Niepoprawna liczba argumentow dla programu macierz!\n");
-        printf("Potrzebne argumenty: plik_lista liczba_procesow limit_czasu shared/separated\n");
+        printf("Potrzebne argumenty: plik_lista liczba_procesow limit_czasu shared/separated cpu_time_limit virtual_mem_limit\n");
         errorExit();
     }
 
@@ -254,11 +254,21 @@ int main(int argc, char** argv){
         fprintf(stderr,"Program mozna wywolac tylko w dwoch trybach: shared/separated (wspoldzielone/osobne pliki wynikowe)\n");
         errorExit();
     }
+    if ( !isANumber(argv[5]) ){
+        fprintf(stderr,"Limit czasu procesora (w sekundach) musi byc dodatnia liczba!\n");
+        errorExit();
+    }
+    if ( !isANumber(argv[6]) ){
+        fprintf(stderr,"Limit pamieci wirtualnej (w MB) musi byc dodatnia liczba!\n");
+        errorExit();
+    }
 
     char* listName = argv[1];
     int processCount = atoi(argv[2]);
     int timeLimit = atoi(argv[3]);
     int isShared = strcmp(argv[4],"shared") == 0 ? 1 : 0;
+    int hardCpuTime = atoi(argv[5]);
+    int hardMemLim = atoi(argv[6]);
 
     FILE* listFile = fopen(listName, "r");
     if (listFile == NULL){
@@ -276,11 +286,24 @@ int main(int argc, char** argv){
 
     create_output_files(matricesA, matricesB, matricesC, pairCount, farm);
 
+    
     for (int i=0; i < processCount; i++){   // Farma rusza 
         pid_t childPid = fork();
 
         if (childPid == 0){     // Potomek mnozy
             
+            // Nakladanie twardych ograniczen
+            struct rlimit* resTimeLimit = (struct rlimit*)calloc(1,sizeof(struct rlimit));
+            resTimeLimit -> rlim_cur = hardCpuTime;
+            resTimeLimit -> rlim_max = hardCpuTime;
+            setrlimit(RLIMIT_CPU,resTimeLimit);
+
+            struct rlimit* resMemLimit = (struct rlimit*)calloc(1,sizeof(struct rlimit));
+            resMemLimit -> rlim_cur = hardMemLim * (1 << 6);    //  by przeliczyc na megabajty
+            resMemLimit -> rlim_max = hardMemLim * (1 << 6);
+            setrlimit(RLIMIT_AS,resMemLimit);
+
+            // Mnozenie
             int mulCounter = 0;
             mulCounter = mul_matrix(i, &processCount, &pairCount, matricesA, matricesB, matricesC, &isShared, &timeLimit, farm);
             exit(mulCounter);       // Tutaj umiera proces
@@ -290,13 +313,27 @@ int main(int argc, char** argv){
         }
     }
 
-    waitpid(0, NULL, 0);        // Czekamy na wszystkie dzieciaczki (Przodek czeka)
-    
+    struct rusage childenResUsage;
 
     for(int i=0; i < processCount; i++){
         int exitStatus;
-        waitpid(farm[i], &exitStatus, 0);
-        printf("Proces: %d wykonal %d mnozen.\n", farm[i], WEXITSTATUS(exitStatus));
+        waitpid(farm[i], &exitStatus, 0);           // Czekamy na kolejnych potomkow (Przodek czeka)
+
+        double prevUsrTime = 0.0f;
+        double prevSysTime = 0.0f;      // O ile dobrze zrozmialem, ze getrusage (RUSAGE_CHILDREN,...) zwraca sumaryczne statystyki dla "poczekanych" dzieci
+        if (i > 0){                     // Wowczas w kolejnych iteracjach odejmujemy sume poprzednich by uzyskac wynik dla poszczegolnego
+            prevUsrTime = childenResUsage.ru_utime.tv_sec + 0.000001f * childenResUsage.ru_utime.tv_usec;
+            prevSysTime = childenResUsage.ru_stime.tv_sec + 0.000001f * childenResUsage.ru_stime.tv_usec;
+        }
+        printf("Proces: %d wykonal %d mnozen.\n", farm[i], WEXITSTATUS(exitStatus) );
+        getrusage(RUSAGE_CHILDREN, &childenResUsage);
+
+        // Wypisywanie zuzycia zasobow przez proces
+        double usrTime = childenResUsage.ru_utime.tv_sec + 0.000001f * childenResUsage.ru_utime.tv_usec - prevUsrTime;
+        double sysTime = childenResUsage.ru_stime.tv_sec + 0.000001f * childenResUsage.ru_stime.tv_usec - prevSysTime;
+
+        printf("Proces: %d usrTime - %f, sysTime - %f\n\n", farm[i], usrTime, sysTime);
+
     }
     if (!isShared)
         paste_files(matricesC, farm, processCount, pairCount);

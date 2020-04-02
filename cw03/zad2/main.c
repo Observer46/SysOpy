@@ -181,7 +181,6 @@ int mul_matrix(int processIdx, int* processCount, int* pairCount, char** matrice
             break;
         }
     }
-    printf("%d konczy dzialanie, wykonalem %d mnozen\n",getpid(),mulCounter);
     return mulCounter;
 }
 
@@ -290,13 +289,10 @@ int main(int argc, char** argv){
         }
     }
 
-    waitpid(0, NULL, 0);        // Czekamy na wszystkie dzieciaczki (Przodek czeka)
-    
-
     for(int i=0; i < processCount; i++){
         int exitStatus;
-        waitpid(farm[i], &exitStatus, 0);
-        printf("Proces: %d wykonal %d mnozen.\n", farm[i], WEXITSTATUS(exitStatus));
+        waitpid(farm[i], &exitStatus, 0);           // Czekamy na kolejnych potomkow (Przodek czeka)
+        printf("Proces: %d wykonal %d mnozen.\n", farm[i], WEXITSTATUS(exitStatus) );
     }
     if (!isShared)
         paste_files(matricesC, farm, processCount, pairCount);

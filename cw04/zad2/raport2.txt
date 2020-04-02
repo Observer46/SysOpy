@@ -1,0 +1,44 @@
+Procesy potomne dziedzicza wartosci maski sygnalow oraz sposobow obslugi sygnalow po przodku. 
+W przypadku wywolania fork(), proces potomny nie posiada nieobsluzonych sygnalow procesu macierzystego (poniewaz jest nowym procesem).
+Po wywolaniu exec*() nieobsluzone procesy sa "dziedziczone", 
+gdyz podprogram jest wykonywane w tym samym procesie (a skoro to ten sam proces to ma te same nieobsluzone sygnaly). 
+
+
+---Wklejone z konsoli---
+
+	 Test dla konfiguracji: ignore fork
+Wysylam sygnal...
+Wysylam sygnal w procesie potomnym...
+
+
+	 Test dla konfiguracji: handler fork
+Wysylam sygnal...
+Odebralem sygnal SIGUSR1 w procesie 6400!
+Wysylam sygnal w procesie potomnym...
+Odebralem sygnal SIGUSR1 w procesie 6401!
+
+
+	 Test dla konfiguracji: mask fork
+Wysylam sygnal...
+Wysylam sygnal w procesie potomnym...
+
+
+	 Test dla konfiguracji: pending fork
+Wysylam sygnal...
+Sygnal SIGUSR1 oczekuje w procesie 6404.
+Nie ma sygnalu SIGUSR1 posrodu oczekujacych w procesie 6405!
+
+
+	 Test dla konfiguracji: ignore exec
+Wysylam sygnal...
+Wysylam sygnal SIGUSR1 w execTest...
+
+	 Test dla konfiguracji: mask exec
+Wysylam sygnal...
+Wysylam sygnal SIGUSR1 w execTest...
+
+	 Test dla konfiguracji: pending exec
+Wysylam sygnal...
+Sygnal SIGUSR1 oczekuje w procesie 6408.
+Sprawdzam, czy w execTest jest widoczny wiszacy sygnal SIGUSR1...
+Sygnal SIGUSR1 oczekuje w programie execTest o PID: 6408.
