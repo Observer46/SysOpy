@@ -2,7 +2,7 @@ CC = gcc -Wall
 
 test:
 	make main
-	./main command_test.txt
+	./main sample_text.txt
 
 main: main.c
 	$(CC) main.c -o main

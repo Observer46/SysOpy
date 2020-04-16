@@ -1,3 +1,0 @@
-Zgodnie z oczekiwaniami, najmniej sygnalow jest odebranych w trybie kill, troche wiecej w sigqueue, a w sigrt wszytskie docieraja.
-Ponadto, programy wykazuja sie wieksza skutecznoscia kiedy sa uruchamiane 
-automatycznie (inny program uruchamia oba podprogramy, wowczas kill do 1000 sygnalow potrafi miec 100% skutecznosci u catchera).
