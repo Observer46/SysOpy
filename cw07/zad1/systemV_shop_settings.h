@@ -13,8 +13,8 @@
 #define RAND_MIN_VAL 1
 #define RAND_MAX_VAL 256
 
-#define SLEEP_MIN 200
-#define SLEEP_MAX 800
+#define SLEEP_MIN 50
+#define SLEEP_MAX 150
 
 
 

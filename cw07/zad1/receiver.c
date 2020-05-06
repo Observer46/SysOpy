@@ -74,7 +74,7 @@ int main(){
         int packages_to_wrap = semctl(semaphores, WRAP_COUNT, GETVAL, NULL);
         int packages_to_send = semctl(semaphores, SEND_COUNT, GETVAL, NULL);
         if (packages_to_send < -1 || packages_to_send < -1){
-            fprintf(stderr,"Receiver: Nie udalo sie odczytac semaforow!\n");
+            fprintf(stderr,"Receiver: Nie udalo sie odczytac semaforow (przed transakcja)!\n");
         }
         
         if(packages_to_send + packages_to_wrap < ORDER_ARRAY_SIZE)

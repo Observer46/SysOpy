@@ -36,7 +36,7 @@ void exit_cleanup(){
 }
 
 void sigint_handle(int sig){
-    printf("Sklep wysylkowy sie wlasnie zamyka...\n");
+    printf("\nSklep wysylkowy sie wlasnie zamyka...\n");
     for(int i=0; i < TOTAL_WORKERS; i++)
         kill(children_pids[i], SIGINT);     
     exit_cleanup();
@@ -95,14 +95,14 @@ void launch_particular_workers(const char* worker_type, int start_idx, int worke
             printf("Sklep wysylkowy: Przybyl %s %d\n", worker_type, i);
             children_pids[start_idx + i] = worker_pid;
             sleep(1);           // Dbamy o to, aby ich seedy losowych liczb byly rozne
-        }
+        }                       // W ten sposob zawsze zaczniemy z przepelniona tablica (co mialo byc zagwarantowane)
     }
 }
 
 void deploy_workers(){
     launch_particular_workers("receiver", 0, RECEIVER_COUNT);
-    //launch_particular_workers("wrapper", RECEIVER_COUNT, WRAPPER_COUNT);
-    //launch_particular_workers("sender", RECEIVER_COUNT + WRAPPER_COUNT, SENDER_COUNT);
+    launch_particular_workers("wrapper", RECEIVER_COUNT, WRAPPER_COUNT);
+    launch_particular_workers("sender", RECEIVER_COUNT + WRAPPER_COUNT, SENDER_COUNT);
     printf("\nSklep wysylkowy: Przybyli wszyscy pracownicy - zmiana rozpoczeta!\n");
 }
 
@@ -118,11 +118,11 @@ int main(){
     }
 
     deploy_workers();
+    for(int i=RECEIVER_COUNT; i < TOTAL_WORKERS; i++)   // Po tym, jak juz wszyscy "przyszli do pracy", dajemy znak by 
+        kill(children_pids[i], SIGUSR1);                // wrapperzy i senderzy zaczeli dzialac
+
     for(int i=0; i < TOTAL_WORKERS; i++)        // Czekanie, az zakoncza dzialanie
         wait(NULL);
     
     exit_cleanup();
-
-    //printf("%d\n", rand_package());
-    return 0;
 }

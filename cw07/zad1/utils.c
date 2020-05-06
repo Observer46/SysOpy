@@ -5,7 +5,7 @@ int rand_package(){
 }
 
 int rand_sleep(){
-    return rand() % (SLEEP_MAX - SLEEP_MIN) + SLEEP_MIN;
+    return (rand() % (SLEEP_MAX - SLEEP_MIN) + SLEEP_MIN) * 10000;  // od 0.5 sekundy do 1.5 sekundy spania
 }
 
 int get_semaphores(){
