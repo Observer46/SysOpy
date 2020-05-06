@@ -1,4 +1,0 @@
-cat /etc/passwd | grep 1 | sort -f -r
-cat /etc/passwd | wc -l -w
-ps -e | sort -r | grep ? | wc -w
-ls -l / | grep root | wc
