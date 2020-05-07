@@ -3,25 +3,24 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
-#include "systemV_shop_settings.h"
 #include "utils.h"
 
 // Globalne ze wzgledu na potrzebe korzystania z nich przy sygnale wyjscia
 pid_t children_pids[TOTAL_WORKERS];
-int semaphores = -1;
-int shared_memory = -1;
+int shm_fd = -1;
 
 int exit_status = 0;
 
 // Organizacja wyjscia z programu
 ////////////////////////////
 void exit_cleanup(){
-    if(semaphores != -1 && semctl(semaphores, 0, IPC_RMID, NULL) == -1){
-        fprintf(stderr,"Main: Nie udalo sie usunac semaforow z pamieci!\n");
-        if (exit_status == 0)   exit_status = 1;
-    }
+    for (int i=0; i < SEMAPHORE_COUNT; i++)
+        if(sem_unlink(semaphores_names[i]) == -1){
+            fprintf(stderr,"Main: Nie udalo sie ktoregos semafora z pamieci!\n");
+            if (exit_status == 0)   exit_status = 1;
+        }
 
-    if(shared_memory != -1 && shmctl(shared_memory, IPC_RMID, NULL) == -1){
+    if(shm_fd != -1 && shm_unlink(SHARED_MEM) == -1){
         fprintf(stderr,"Main: Nie udalo sie usunac pamieci wspoldzielonej!\n");
         if (exit_status == 0)   exit_status = 2;
     }
@@ -39,38 +38,51 @@ void sigint_handle(int sig){
 
 // Tworzenie semaforow oraz pamieci wspoldzielonej
 ////////////////////////////
-void create_semaphores(){
-    key_t sem_key = ftok(getenv("HOME"), 'a');
-    semaphores = semget(sem_key, SEMAPHORE_COUNT, IPC_CREAT|0666);
-    if (semaphores == -1){
-        fprintf(stderr,"Main: Nie udalo sie utworzyc zbioru semaforow!\n");
-        exit(1);
+void create_semaphores(){   
+    sem_t * sem = sem_open(semaphores_names[ARRAY_STATUS], O_RDWR|O_CREAT, S_IRWXU|S_IRWXG|S_IRWXO, 1); // Inicjujemy jako wolna 
+    if ( sem == (void*) -1 ){  
+        fprintf(stderr, "Main: Nie powiodlo sie utworzenie semafora!\n");
+        exit_status = 1;
+        exit_cleanup();
     }
-
-    union semun arg;
-    arg.val = 0;        
-    for(int i=0; i < SEMAPHORE_COUNT; i++)  // Inicjalizacja wszystkich semaforow
-        if ( semctl(semaphores, i, SETVAL, arg) == -1 ){     // Kolejne semafory maja odpowiednie funkcje (opisane w utils.h)
-            fprintf(stderr, "Main: Nie powiodlo sie ustawienie wartosci semafora!\n");
+    if (sem_close(sem) == -1){
+        fprintf(stderr,"Main: Nie udalo sie zamknac semafora po jego utworzeniu!\n");
+        exit_status = 1;
+        exit_cleanup();
+    }   
+    for(int i=1; i < SEMAPHORE_COUNT; i++){                 // Tworzenie i inicjalizacja wszystkich semaforow
+        sem = sem_open(semaphores_names[i], O_RDWR|O_CREAT, S_IRWXU|S_IRWXG|S_IRWXO, 0); 
+        if ( sem == (void*) -1 ){    // Kolejne semafory maja odpowiednie funkcje (opisane w utils.h)
+            fprintf(stderr, "Main: Nie powiodlo sie utworzenie semafora!\n");
             exit_status = 1;
             exit_cleanup();
         }
+        if (sem_close(sem) == -1){
+            fprintf(stderr,"Main: Nie udalo sie zamknac semafora po jego utworzeniu!\n");
+            exit_status = 1;
+            exit_cleanup();
+        }
+    }
 }           
 
 
 void create_shared_mem(){
-    key_t shm_key = ftok(getenv("HOME"), 'b');
-    shared_memory = shmget(shm_key, sizeof(orders_struct), IPC_CREAT|0666);
-    if (shared_memory == -1){
-        fprintf(stderr,"Main: Nie udalo sie utworzyc zbioru semaforow!\n");
-        exit(1);
+    shm_fd = shm_open(SHARED_MEM, O_RDWR|O_CREAT, S_IRWXU|S_IRWXG|S_IRWXO);
+    if (shm_fd == -1 ){
+        fprintf(stderr, "Main: Nie udalo sie utworzy pamieci wspoldzielonej!\n");
+        exit_status = 2;
+        exit_cleanup();
+    }
+    if ( ftruncate(shm_fd, sizeof(orders_struct)) == -1 ){
+        fprintf(stderr, "Main: Nie udalo sie ustawic rozmiaru pamieci wspoldzielonej!\n");
+        exit_status = 2;
+        exit_cleanup();
     }
 }
-////////////////////////
+////////////////////////////
 
-
-// Uruchamianie "pracownikow"
-/////////////////////////
+// Uruchamianie pracownikow
+////////////////////////////
 void launch_particular_workers(const char* worker_type, int start_idx, int worker_count){
     pid_t worker_pid;
     char program_name[16];
@@ -85,7 +97,7 @@ void launch_particular_workers(const char* worker_type, int start_idx, int worke
         if (worker_pid == 0){
             execl(program_name,worker_type,NULL);
             // Jesli uruchomienie sie nie powiedzie
-            fprintf(stderr,"Main: Wystapil problem z uruchomienie programu %s!\n", worker_type);
+            fprintf(stderr,"Main: Wystapil problem z uruchomieniem programu %s!\n", worker_type);
             exit_status = 4;
             exit_cleanup();
         }
@@ -103,18 +115,17 @@ void deploy_workers(){
     launch_particular_workers("sender", RECEIVER_COUNT + WRAPPER_COUNT, SENDER_COUNT);
     printf("\nSklep wysylkowy: Przybyli wszyscy pracownicy - zmiana rozpoczeta!\n");
 }
-///////////////////////
+////////////////////////
 
 
 int main(){
     srand(time(NULL));
     create_semaphores();
-    create_shared_mem();
     if (signal(SIGINT, sigint_handle) == SIG_ERR){
         fprintf(stderr,"Nie udalo sie ustawic obslugi sygnalu SIGINT!\n");
         exit(3);
     }
-
+    create_shared_mem();
     deploy_workers();
     for(int i=RECEIVER_COUNT; i < TOTAL_WORKERS; i++)   // Po tym, jak juz wszyscy "przyszli do pracy", dajemy znak by 
         kill(children_pids[i], SIGUSR1);                // wrapperzy i senderzy zaczeli dzialac

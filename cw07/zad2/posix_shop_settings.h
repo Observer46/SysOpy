@@ -1,0 +1,24 @@
+#ifndef _SHOP_SETTINGS_H
+#define _SHOP_SETTINGS_H
+
+
+#define RECEIVER_COUNT 5 
+#define WRAPPER_COUNT 4
+#define SENDER_COUNT 3
+#define TOTAL_WORKERS RECEIVER_COUNT + WRAPPER_COUNT + SENDER_COUNT
+
+#define SEMAPHORE_COUNT 6
+#define ORDER_ARRAY_SIZE 7
+
+#define RAND_MIN_VAL 1
+#define RAND_MAX_VAL 256
+
+#define SLEEP_MIN 50
+#define SLEEP_MAX 150
+
+#define SHARED_MEM "/SHRD_MEM"
+
+
+
+
+#endif

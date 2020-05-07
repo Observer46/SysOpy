@@ -51,21 +51,27 @@ void send_order(int semaphores, int shared_mem){
         error_exit("Sender: Nie udalo sie odczytac ilosci paczek do zapakowania/do wyslania!",3);   
 
     //Log
-    printf("(%d %ld) Wyslalem zamowienie o wielkosci: %d. Liczba zamównień do przygotowania: %d. Liczba zamównień do wysłania: %d.\n", getpid(), time(NULL), orders->orders[idx], orders_to_wrap, orders_to_send);// formatowanie czasu?
+    struct timeval time_info;
+    if(gettimeofday(&time_info, NULL) == -1)            // Stosunkowo maly problem, jesli nie uzyskamy godziny wiec nie konczymy pracy
+        fprintf(stderr,"Sender: Nie udalo sie uzyskac godziny (nie koncze programu)\n");        
+    
+    char time_str[32];
+    strftime(time_str, 32, "%H:%M:%S", localtime(&time_info.tv_sec));
+    printf("(%d %s.%ld) Wyslalem zamowienie o wielkosci: %d. Liczba zamównień do przygotowania: %d. Liczba zamównień do wysłania: %d.\n", getpid(), time_str, time_info.tv_usec / 1000, orders->orders[idx], orders_to_wrap, orders_to_send);
 
     if (shmdt(orders) == -1)
         error_exit("Sender: Nie udalo sie odlaczyc pamieci wspoldzielonej!",4);
 
     struct sembuf* closeup = (struct sembuf*) calloc(1, sizeof(struct sembuf));
 
-    closeup[0].sem_num = ARRAY_STATUS;   // Zwolnienie tablicy na wolna tablice
+    closeup[0].sem_num = ARRAY_STATUS;   // Zwolnienie tablicy
     closeup[0].sem_op = -1;
 
     if ( semop(semaphores, closeup, 1) == -1 )
         error_exit("Sender: Nie udalo sie wyslac ostatnich operacji do semafora!", 3);
 }
 
-
+// Sygnal SIGUSR1 uruchamia program (wrapperzy i senderzy czekaja az wszystkie ich podprogramy zostana uruchomione)
 void sigusr1_handle(int sig){
     int semaphores = get_semaphores();
     int shared_mem = get_shared_mem();
@@ -73,9 +79,8 @@ void sigusr1_handle(int sig){
     while(1){
         usleep(rand_sleep());   // Spi chwile po czym 'wysyla' nowe zamowienie
         int packages_to_send = semctl(semaphores, SEND_COUNT, GETVAL, NULL);
-        if (packages_to_send < -1) {
-            fprintf(stderr,"Sender: Nie udalo sie odczytac semaforow (przed transakcja)!\n");
-        }
+        if (packages_to_send < -1) 
+            error_exit("Sender: Nie udalo sie odczytac semaforow (przed transakcja)!\n", 13);
         
         if(packages_to_send > 0)
             send_order(semaphores, shared_mem);
