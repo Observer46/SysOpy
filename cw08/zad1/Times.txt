@@ -1,0 +1,117 @@
+	 Metoda: sign, liczba watkow: 1
+Watek 0 (140388037289728): 0s 0ms 930us
+
+Sumaryczny czas: 0s 1ms 125us
+
+
+------------------------
+	 Metoda: sign, liczba watkow: 2
+Watek 0 (139834838406912): 0s 1ms 546us
+Watek 1 (139834830014208): 0s 6ms 196us
+
+Sumaryczny czas: 0s 6ms 624us
+
+
+------------------------
+	 Metoda: sign, liczba watkow: 4
+Watek 0 (139653006259968): 0s 0ms 791us
+Watek 1 (139652997867264): 0s 1ms 315us
+Watek 2 (139652989474560): 0s 1ms 490us
+Watek 3 (139652981081856): 0s 0ms 956us
+
+Sumaryczny czas: 0s 8ms 65us
+
+
+------------------------
+	 Metoda: sign, liczba watkow: 8
+Watek 0 (140366376609536): 0s 0ms 676us
+Watek 1 (140366368216832): 0s 0ms 795us
+Watek 2 (140366359824128): 0s 1ms 150us
+Watek 3 (140366351431424): 0s 1ms 389us
+Watek 4 (140366343038720): 0s 1ms 516us
+Watek 5 (140366334646016): 0s 11ms 117us
+Watek 6 (140366326253312): 0s 1ms 329us
+Watek 7 (140366317860608): 0s 0ms 778us
+
+Sumaryczny czas: 0s 20ms 938us
+
+
+------------------------
+	 Metoda: block, liczba watkow: 1
+Watek 0 (140534321731328): 0s 0ms 741us
+
+Sumaryczny czas: 0s 3ms 530us
+
+
+------------------------
+	 Metoda: block, liczba watkow: 2
+Watek 0 (139843713754880): 0s 0ms 374us
+Watek 1 (139843705362176): 0s 0ms 395us
+
+Sumaryczny czas: 0s 4ms 153us
+
+
+------------------------
+	 Metoda: block, liczba watkow: 4
+Watek 0 (140585701046016): 0s 0ms 224us
+Watek 1 (140585692653312): 0s 0ms 217us
+Watek 2 (140585684260608): 0s 0ms 220us
+Watek 3 (140585675867904): 0s 0ms 243us
+
+Sumaryczny czas: 0s 7ms 182us
+
+
+------------------------
+	 Metoda: block, liczba watkow: 8
+Watek 0 (139884653598464): 0s 0ms 110us
+Watek 1 (139884645205760): 0s 0ms 121us
+Watek 2 (139884636813056): 0s 0ms 145us
+Watek 3 (139884628420352): 0s 0ms 127us
+Watek 4 (139884620027648): 0s 0ms 127us
+Watek 5 (139884611634944): 0s 0ms 127us
+Watek 6 (139884603242240): 0s 0ms 158us
+Watek 7 (139884594849536): 0s 0ms 128us
+
+Sumaryczny czas: 0s 6ms 764us
+
+
+------------------------
+	 Metoda: interleaved, liczba watkow: 1
+Watek 0 (139745266050816): 0s 0ms 738us
+
+Sumaryczny czas: 0s 0ms 896us
+
+
+------------------------
+	 Metoda: interleaved, liczba watkow: 2
+Watek 0 (140399496251136): 0s 0ms 389us
+Watek 1 (140399487858432): 0s 1ms 104us
+
+Sumaryczny czas: 0s 1ms 705us
+
+
+------------------------
+	 Metoda: interleaved, liczba watkow: 4
+Watek 0 (139732146009856): 0s 0ms 170us
+Watek 1 (139732137617152): 0s 0ms 171us
+Watek 2 (139732129224448): 0s 0ms 180us
+Watek 3 (139732120831744): 0s 0ms 191us
+
+Sumaryczny czas: 0s 1ms 66us
+
+
+------------------------
+	 Metoda: interleaved, liczba watkow: 8
+Watek 0 (140289091098368): 0s 0ms 87us
+Watek 1 (140289082705664): 0s 0ms 88us
+Watek 2 (140289074312960): 0s 0ms 105us
+Watek 3 (140289065920256): 0s 0ms 87us
+Watek 4 (140289057527552): 0s 0ms 89us
+Watek 5 (140289049134848): 0s 0ms 95us
+Watek 6 (140289040742144): 0s 0ms 147us
+Watek 7 (140289032349440): 0s 0ms 157us
+
+Sumaryczny czas: 0s 1ms 392us
+
+
+------------------------
